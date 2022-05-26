@@ -1,0 +1,35 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"FungibleToken": "./cadence/contracts/FungibleToken.cdc",
+		"MetadataViews": "./cadence/contracts/MetadataViews.cdc",
+		"NonFungibleToken": "./cadence/contracts/NonFungibleToken.cdc",
+		"Auras": "./cadence/contracts/Auras.cdc"
+
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "d3755b86521cd2791a087d72856564945ebcf0cd896b996d67897b2529049b53"
+		},
+		"my-testnet-account": {
+			"address": "0x9b19adaf4947d5b5",
+			"key": "1e8b409cdbde3f4c2ef7f9225bb4439dd3cfb4914bd02f9ce24ad01333011a4d"
+		}
+	},
+	"deployments": {
+		"testnet": {
+			"my-testnet-account": ["Auras", "FungibleToken", "NonFungibleToken", "MetadataViews"]
+		  }
+	}
+}
