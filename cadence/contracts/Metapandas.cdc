@@ -1,6 +1,7 @@
 import NonFungibleToken from "./NonFungibleToken.cdc"
 
-pub contract MetaPandas: NonFungibleToken {
+    pub contract Metapandas: NonFungibleToken {
+
     pub var totalSupply: UInt64
 
     pub event ContractInitialized()
@@ -15,15 +16,11 @@ pub contract MetaPandas: NonFungibleToken {
         pub let id: UInt64 
 
         init() {
-            self.id = MetaPandas.totalSupply
-            MetaPandas.totalSupply = MetaPandas.totalSupply + 1
+            self.id = Metapandas.totalSupply
+            Metapandas.totalSupply = Metapandas.totalSupply + 1
         }
     }
 
-    pub resource interface CollectionPublic {
-        pub fun deposit(token: @NFT)
-        pub fun getIDs(): [UInt64]
-    }
 
     pub resource Collection: NonFungibleToken.Provider, NonFungibleToken.Receiver,  NonFungibleToken.CollectionPublic {
     // map the id of the nft -----> to the nft with that id
@@ -76,7 +73,7 @@ pub contract MetaPandas: NonFungibleToken {
         emit ContractInitialized()
 
         // admin minter setting
-        self.account.save(<- create NFTMinter(), to: /storage/Minter)
+        self.account.save(<- create NFTMinter(), to: /storage/metapandasMinter)
     }
 
 }

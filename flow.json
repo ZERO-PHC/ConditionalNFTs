@@ -9,8 +9,9 @@
 		"FungibleToken": "./cadence/contracts/FungibleToken.cdc",
 		"MetadataViews": "./cadence/contracts/MetadataViews.cdc",
 		"NonFungibleToken": "./cadence/contracts/NonFungibleToken.cdc",
-		"Auras": "./cadence/contracts/Auras.cdc"
-
+		"Auras": "./cadence/contracts/Auras.cdc",
+		"Metapandas": "./cadence/contracts/Metapandas.cdc",
+		"ExampleNFT": "./cadence/contracts/ExampleNFT.cdc"
 	},
 	"networks": {
 		"emulator": "127.0.0.1:3569",
@@ -29,7 +30,7 @@
 	},
 	"deployments": {
 		"testnet": {
-			"my-testnet-account": ["Auras", "FungibleToken", "NonFungibleToken", "MetadataViews"]
+			"my-testnet-account": ["Metapandas", "ExampleNFT","Auras", "FungibleToken", "NonFungibleToken", "MetadataViews"]
 		  }
 	}
 }
