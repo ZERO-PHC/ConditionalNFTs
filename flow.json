@@ -6,12 +6,11 @@
 		}
 	},
 	"contracts": {
-		"FungibleToken": "./cadence/contracts/FungibleToken.cdc",
-		"MetadataViews": "./cadence/contracts/MetadataViews.cdc",
-		"NonFungibleToken": "./cadence/contracts/NonFungibleToken.cdc",
-		"Auras": "./cadence/contracts/Auras.cdc",
-		"Metapandas": "./cadence/contracts/Metapandas.cdc",
-		"ExampleNFT": "./cadence/contracts/ExampleNFT.cdc"
+		"FungibleToken": "./contracts/FungibleToken.cdc",
+		"FlowToken": "./contracts/FlowToken.cdc",
+		"MetadataViews": "./contracts/MetadataViews.cdc",
+		"NonFungibleToken": "./contracts/NonFungibleToken.cdc",
+		"Lockies": "./contracts/Lockies.cdc"
 	},
 	"networks": {
 		"emulator": "127.0.0.1:3569",
@@ -29,8 +28,22 @@
 		}
 	},
 	"deployments": {
+		"emulator": {
+			"emulator-account": [
+			  "FungibleToken",
+			  "NonFungibleToken",
+			  "MetadataViews",
+			  "Lockies"
+			]
+		},
 		"testnet": {
-			"my-testnet-account": ["Metapandas", "ExampleNFT","Auras", "FungibleToken", "NonFungibleToken", "MetadataViews"]
+			"my-testnet-account": [
+				"FungibleToken",
+				"NonFungibleToken",
+				"MetadataViews",
+				"Lockies"
+			]
 		  }
+		
 	}
 }
