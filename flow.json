@@ -10,7 +10,11 @@
 		"FlowToken": "./contracts/FlowToken.cdc",
 		"MetadataViews": "./contracts/MetadataViews.cdc",
 		"NonFungibleToken": "./contracts/NonFungibleToken.cdc",
-		"Lockies": "./contracts/Lockies.cdc"
+		"Crafters": "./contracts/Crafters.cdc",
+		"ExampleNFT": "./contracts/ExampleNFT.cdc",
+		"DimensionNFT": "./contracts/DimensionNFT.cdc",
+		"Lockies": "./contracts/Lockies.cdc",
+		"ConditionalNFTs": "./contracts/ConditionalNFTs.cdc"
 	},
 	"networks": {
 		"emulator": "127.0.0.1:3569",
@@ -33,7 +37,7 @@
 			  "FungibleToken",
 			  "NonFungibleToken",
 			  "MetadataViews",
-			  "Lockies"
+			  "DimensionNFT"
 			]
 		},
 		"testnet": {
@@ -41,7 +45,8 @@
 				"FungibleToken",
 				"NonFungibleToken",
 				"MetadataViews",
-				"Lockies"
+				"DimensionNFT",
+				"ConditionalNFTs"
 			]
 		  }
 		
