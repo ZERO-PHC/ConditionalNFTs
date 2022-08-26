@@ -1,0 +1,2 @@
+flow scripts execute ./scripts/get_time_nfts.cdc 0x9b19adaf4947d5b5 -n testnet 
+flow scripts execute ./scripts/get_expired_nfts.cdc 0x9b19adaf4947d5b5 -n testnet 

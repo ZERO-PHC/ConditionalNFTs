@@ -1,1 +1,4 @@
-flow transactions send ./transactions/set_locktime.cdc -n testnet --signer my-testnet-account
+flow transactions send ./transactions/mint_conditional.cdc "n1" "d1" "t1" "type1"  -n testnet --signer my-testnet-account
+
+Expire NFT 
+flow transactions send ./transactions/expire_nft.cdc "107005779" -n testnet --signer my-testnet-account
